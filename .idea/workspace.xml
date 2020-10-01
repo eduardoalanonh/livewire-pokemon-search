@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec9c0c28-00cf-4c4c-97e9-4178c05db154" name="Default Changelist" comment="" />
+    <list default="true" id="ec9c0c28-00cf-4c4c-97e9-4178c05db154" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Input.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/input.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +20,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -161,7 +174,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601341360825</updated>
       <workItem from="1601341362077" duration="2387000" />
-      <workItem from="1601418489485" duration="8034000" />
+      <workItem from="1601418489485" duration="8643000" />
+      <workItem from="1601432571144" duration="2362000" />
     </task>
     <servers />
   </component>
@@ -169,22 +183,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1601418944157">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1601427153831">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601418944157" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1601418944156">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601427153831" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1601427153831">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601418944156" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1601418944156">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601427153831" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1601427153830">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601418944156" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1601418944156">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601427153830" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1601427153831">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601418944156" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601427153831" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1601421785113">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

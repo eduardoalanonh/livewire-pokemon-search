@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Pokemon') }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -24,9 +24,15 @@
 
 
             <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                </div>
+            <header>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link @if(request()->is('/')) active @endif" href="{{route('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if(request()->is('register')) active @endif" href="{{route('register')}}">Register</a>
+                    </li>
+                </ul>
             </header>
 
             <!-- Page Content -->
