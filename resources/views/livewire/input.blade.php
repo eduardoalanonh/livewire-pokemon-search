@@ -6,7 +6,7 @@
             </div>
             <div class="card-body justify-center">
                 <div class="input-group mb-3">
-                    <input wire:model="pokemon" type="text" class="form-control" placeholder="Pokemon name or ID"
+                    <input wire:model="pokemon" wire:keydown.enter="getPokemon" type="text" class="form-control" placeholder="Pokemon name or ID"
                            aria-label="Recipient's username" aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button wire:click="getPokemon" class="btn btn-outline-secondary" type="button"
@@ -19,9 +19,7 @@
                 </div>
             </div>
         </div>
-
         @if($data)
-
             <div class="mt-3">
                 <div class="card">
                     <div class="card-header text-center">
@@ -61,9 +59,14 @@
                             @endif
                         @endforeach
                     </div>
+                    @if($pokemon_model != $data['name'])
                     <div class="text-center mb-5">
-                        <button class="btn btn-success btn-lg">Add on deck</button>
+                        <button class="btn btn-success btn-lg" wire:click="addPokemonOnDeck">Add on deck
+                            <span wire:loading wire:target="addPokemonOnDeck" class="spinner-border spinner-border-sm"
+                                  role="status" aria-hidden="true"></span>
+                        </button>
                     </div>
+                    @endif
                 </div>
             </div>
         @endif
