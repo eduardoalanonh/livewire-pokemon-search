@@ -1,5 +1,5 @@
 <div class="mt-5 d-flex justify-content-center">
-    <div class="col-6">
+    <div class="col-11 col-md-6 col-lg-6">
         <div class="card">
             <div class="card-header">
                 Pokémon Search
