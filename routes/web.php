@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('layouts.app');
+});
+
+Route::get('/', \App\Http\Livewire\Input::class)->name('home');
+
+Route::get('/deck', \App\Http\Livewire\Deck::class)->name('deck');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

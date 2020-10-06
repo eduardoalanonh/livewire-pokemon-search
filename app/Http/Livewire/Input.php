@@ -2,8 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Deck;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
@@ -16,6 +15,7 @@ class Input extends Component
     public $ability;
     public $response_code;
     public $pokemon_model;
+    public $pokemon_exist = false;
 
 
     protected $rules = [
@@ -24,7 +24,9 @@ class Input extends Component
 
     public function render()
     {
-        return view('livewire.input');
+        return view('livewire.input')
+            ->extends('layouts.app')
+            ->section('content');
     }
 
     public function getPokemon()
@@ -34,26 +36,39 @@ class Input extends Component
         $this->response_code = $response->status();
         $this->data = $response->json();
 
+        //verify pokemon exists
+        if (auth()->user()) {
+            $this->pokemon_exist = Deck::all()->contains('name', null, $this->pokemon);
+        }
+
         if ($this->data ?? false) {
             $this->images = array_filter($this->data['sprites'],
                 fn($item) => !is_array($item));
             $this->ability = $this->data['abilities'][0]['ability']['name'];
         }
+
+
     }
 
     public function addPokemonOnDeck()
     {
-       $pokemon = Auth()->user()->decks()->create([
-            'name' => $this->data['name'],
-            'weight' => $this->data['weight'],
-            'height' => $this->data['height'],
-            'base_experience' => $this->data['base_experience'],
-            'ability' => $this->ability,
-        ]);
+        if (auth()->user()) {
 
-       $this->pokemon_model = $pokemon->name;
+            $pokemon = Auth()->user()->decks()->create([
+                'name' => $this->data['name'],
+                'weight' => $this->data['weight'],
+                'height' => $this->data['height'],
+                'base_experience' => $this->data['base_experience'],
+                'ability' => $this->ability,
+                'image' => array_shift($this->images)
 
+            ]);
 
+            $this->pokemon_model = $pokemon->name;
 
+            session()->flash('message', 'Post successfully updated.');
+        } else {
+            return redirect()->to('/login');
+        }
     }
 }

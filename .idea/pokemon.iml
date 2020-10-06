@@ -131,5 +131,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="livewire-turbolinks" level="application" />
   </component>
 </module>

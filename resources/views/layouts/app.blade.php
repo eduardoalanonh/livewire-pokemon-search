@@ -13,12 +13,13 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.cs">
+
 
     @livewireStyles
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
+
 </head>
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100">
@@ -43,7 +44,7 @@
             @endif
             @auth()
                 <li class="nav-item">
-                    <a class="nav-link @if(request()->is('register')) active @endif" href="{{route('register')}}">My
+                    <a class="nav-link @if(request()->is('deck')) active @endif" href="{{route('deck')}}">My
                         deck</a>
                 </li>
             @endauth
@@ -67,11 +68,11 @@
     <!-- Page Content -->
     <main>
         @yield('content')
+
     </main>
 </div>
-
-@stack('modals')
-
 @livewireScripts
+<script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
+
 </body>
 </html>
