@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Deck;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
@@ -19,7 +20,7 @@ class Input extends Component
 
 
     protected $rules = [
-        'pokemon' => 'min:1'
+        'pokemon' => 'min:1',
     ];
 
     public function render()
@@ -32,7 +33,7 @@ class Input extends Component
     public function getPokemon()
     {
         $this->validate();
-        $response = Http::get('https://pokeapi.co/api/v2/pokemon/' . $this->pokemon);
+        $response = Http::get('https://pokeapi.co/api/v2/pokemon/' . strtolower($this->pokemon));
         $this->response_code = $response->status();
         $this->data = $response->json();
 
@@ -47,12 +48,16 @@ class Input extends Component
             $this->ability = $this->data['abilities'][0]['ability']['name'];
         }
 
-
     }
 
     public function addPokemonOnDeck()
     {
         if (auth()->user()) {
+
+
+
+
+
 
             $pokemon = Auth()->user()->decks()->create([
                 'name' => $this->data['name'],

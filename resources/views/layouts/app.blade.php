@@ -27,41 +27,47 @@
 
     <!-- Page Heading -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-lighttext-light">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link @if(request()->is('/')) active @endif" href="{{route('home')}}">Home</a>
-            </li>
-            @if(!auth()->user())
-            <li class="nav-item">
-                <a class="nav-link @if(request()->is('register')) active @endif"
-                   href="{{route('register')}}">Register</a>
-            </li>
-                <li class="nav-item">
-                    <a class="nav-link @if(request()->is('login')) active @endif"
-                       href="{{route('login')}}">Login</a>
-                </li>
-            @endif
-            @auth()
-                <li class="nav-item">
-                    <a class="nav-link @if(request()->is('deck')) active @endif" href="{{route('deck')}}">My
-                        deck</a>
-                </li>
-            @endauth
-        </ul>
-            @auth()
-            <div class="my-2 my-lg-0">
-                <ul class="nav nav-tabs justify-content-center">
-                    <li class="nav-item">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand  @if(request()->is('/')) active @endif" href="{{route('home')}}">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-lightning-fill" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                </svg>
+                Home
+            </a>
+            <div class=" navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                    </li>
+                    @auth()
+                        <li class="nav-item">
+                            <a class="nav-link @if(request()->is('pokemon')) active @endif" href="{{route('pokemon')}}">My
+                                Pokemon</a>
+                        </li>
+                    @endauth
+                </ul>
+                <ul class="navbar-nav right">
+                    @if(!auth()->user())
+                        <li class="nav-item">
+                            <a class="nav-link @if(request()->is('login')) active @endif"
+                               href="{{route('login')}}"><span>Login</span></a>
+                        </li>
+                        <li>
+                            <a class="nav-link @if(request()->is('register')) active @endif"
+                               href="{{route('register')}}"><span>Register</span></a>
+                        </li>
+                    @endif
+                    @if(auth()->user())
                         <a class="nav-link" href="#"
                            onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Sair</a>
                         <form action="{{route('logout')}}" class="logout" method="POST" style="display:none;">
                             @csrf
                         </form>
-                    </li>
+                    @endif
                 </ul>
             </div>
-            @endauth
         </nav>
     </header>
 
@@ -72,7 +78,8 @@
     </main>
 </div>
 @livewireScripts
-<script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script>
+<script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
+        data-turbolinks-eval="false"></script>
 
 </body>
 </html>

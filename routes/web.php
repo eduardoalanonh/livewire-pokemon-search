@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/', \App\Http\Livewire\Input::class)->name('home');
 
-Route::get('/deck', \App\Http\Livewire\Deck::class)->name('deck');
+Route::get('/pokemon', \App\Http\Livewire\Deck::class)->name('pokemon');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
