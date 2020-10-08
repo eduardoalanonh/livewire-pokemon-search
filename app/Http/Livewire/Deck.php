@@ -12,6 +12,12 @@ class Deck extends Component
 
     public function render()
     {
+        if(session()->has('pokemon')){
+            $pokemon = session()->get('pokemon');
+            Auth()->user()->decks()->create($pokemon);
+            session()->forget('pokemon');
+        }
+
         $this->pokemons = auth()->user()->decks;
 
         return view('livewire.deck')

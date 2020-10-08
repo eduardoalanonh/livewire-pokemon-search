@@ -52,27 +52,23 @@ class Input extends Component
 
     public function addPokemonOnDeck()
     {
+        $pokemonAdd = [
+            'name' => $this->data['name'],
+            'weight' => $this->data['weight'],
+            'height' => $this->data['height'],
+            'base_experience' => $this->data['base_experience'],
+            'ability' => $this->ability,
+            'image' => array_shift($this->images)
+        ];
         if (auth()->user()) {
-
-
-
-
-
-
-            $pokemon = Auth()->user()->decks()->create([
-                'name' => $this->data['name'],
-                'weight' => $this->data['weight'],
-                'height' => $this->data['height'],
-                'base_experience' => $this->data['base_experience'],
-                'ability' => $this->ability,
-                'image' => array_shift($this->images)
-
-            ]);
+            $pokemon = Auth()->user()->decks()->create($pokemonAdd);
 
             $this->pokemon_model = $pokemon->name;
 
             session()->flash('message', 'Post successfully updated.');
         } else {
+            session()->put('pokemon', $pokemonAdd);
+
             return redirect()->to('/login');
         }
     }

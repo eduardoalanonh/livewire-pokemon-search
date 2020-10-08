@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ec9c0c28-00cf-4c4c-97e9-4178c05db154" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Deck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Deck.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Input.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/deck.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/deck.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../marketplace_l6" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -208,7 +203,8 @@
       <workItem from="1601936486261" duration="3380000" />
       <workItem from="1601949882587" duration="457000" />
       <workItem from="1601950369455" duration="1818000" />
-      <workItem from="1602023923274" duration="7624000" />
+      <workItem from="1602023923274" duration="8754000" />
+      <workItem from="1602035611142" duration="4229000" />
     </task>
     <servers />
   </component>
@@ -220,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="679" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601950247790" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602028048190">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602197312817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602028048190" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602197312817" />
     <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1601942984388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,5 +248,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601421785113" />
+    <state x="656" y="244" width="627" height="552" key="find.popup" timestamp="1602196351893">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="244" width="627" height="552" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602196351893" />
   </component>
 </project>
