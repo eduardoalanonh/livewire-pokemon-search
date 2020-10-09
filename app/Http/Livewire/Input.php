@@ -3,7 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Deck;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
@@ -39,7 +41,11 @@ class Input extends Component
 
         //verify pokemon exists
         if (auth()->user()) {
-            $this->pokemon_exist = Deck::all()->contains('name', null, $this->pokemon);
+            $pokemon_exist = DB::table('decks')->where([
+                ['name', '=', $this->data['name']],
+                ['user_id', '=', \auth()->user()->getAuthIdentifier()]
+            ])->get();
+            $this->pokemon_exist = $pokemon_exist->isNotEmpty();
         }
 
         if ($this->data ?? false) {

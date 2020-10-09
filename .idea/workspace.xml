@@ -4,8 +4,6 @@
     <list default="true" id="ec9c0c28-00cf-4c4c-97e9-4178c05db154" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Input.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1601949882587" duration="457000" />
       <workItem from="1601950369455" duration="1818000" />
       <workItem from="1602023923274" duration="8754000" />
-      <workItem from="1602035611142" duration="4229000" />
+      <workItem from="1602035611142" duration="7099000" />
     </task>
     <servers />
   </component>
