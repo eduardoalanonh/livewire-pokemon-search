@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/', \App\Http\Livewire\Input::class)->name('home');
 
+
+
 Route::get('/pokemon', \App\Http\Livewire\Deck::class)->name('pokemon');
 
 Route::get('/users', \App\Http\Livewire\Users::class)->name('users');

@@ -6,7 +6,7 @@
             </div>
             <div class="card-body justify-center">
                 <div class="row">
-                    <div class="col-6"
+                    <div class="col-12 col-md-6 col-lg-6"
                          x-data="{ isUploading: false, progress: 0 }"
                          x-on:livewire-upload-start="isUploading = true"
                          x-on:livewire-upload-finish="isUploading = false"
@@ -47,7 +47,7 @@
                         </form>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-12 col-md-6 col-lg-6">
                         <div class="input-group flex-nowrap mt-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="addon-wrapping">Email</span>
