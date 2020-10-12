@@ -25,14 +25,14 @@
                 <div class="card">
                     <div class="card-header text-center">
                         <h1 class="h1">
-                            {{$data['name']}}
+                            {{ ucfirst($data['name'])}}
                         </h1>
                     </div>
                     <div class="card-body">
                         <div>
                             <h3>Weigtht</h3>
                             <div class="progress">
-                                <div class="progress-bar bg-info" role="progressbar" style="width: {{$data['weight']}}%"
+                                <div class="progress-bar bg-info"  role="progressbar" style="width: {{$data['weight']}}%"
                                      aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <h3>Base Experience</h3>

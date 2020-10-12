@@ -21,6 +21,12 @@ Route::get('/', \App\Http\Livewire\Input::class)->name('home');
 
 Route::get('/pokemon', \App\Http\Livewire\Deck::class)->name('pokemon');
 
+Route::get('/users', \App\Http\Livewire\Users::class)->name('users');
+
+Route::get('/profile', \App\Http\Livewire\Profile::class)->name('profile');
+
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

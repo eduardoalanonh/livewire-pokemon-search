@@ -2,9 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Deck;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;

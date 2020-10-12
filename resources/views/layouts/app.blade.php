@@ -20,10 +20,10 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
 
+
 </head>
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100">
-
 
     <!-- Page Heading -->
     <header>
@@ -46,6 +46,10 @@
                             <a class="nav-link @if(request()->is('pokemon')) active @endif" href="{{route('pokemon')}}">My
                                 Pokemon</a>
                         </li>
+{{--                        <li>--}}
+{{--                            <a class="nav-link @if(request()->is('users')) active @endif"--}}
+{{--                               href="{{route('users')}}"><span>User's Pokemons</span></a>--}}
+{{--                        </li>--}}
                     @endauth
                 </ul>
                 <ul class="navbar-nav right">
@@ -60,8 +64,22 @@
                         </li>
                     @endif
                     @if(auth()->user())
+                        <li class="nav-item">
+                            <a class="nav-link @if(request()->is('profile')) active @endif"
+                               href="{{route('profile')}}"> <span>
+                                     @if(!auth()->user()->profile_photo_path)
+                                        <img src="{{asset('storage/no-profile.jpg')}}" alt="..." style="width:40px">
+                                    @else
+                                        <img
+                                            src="{{asset('storage/' . str_replace('public/', '', auth()->user()->profile_photo_path))}}"
+                                            alt="..." style="width:20px"
+                                            class="img-fluid rounded rounded-circle">
+                                    @endif
+                                </span>Profile </a>
+                        </li>
+
                         <a class="nav-link" href="#"
-                           onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Sair</a>
+                           onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Logout</a>
                         <form action="{{route('logout')}}" class="logout" method="POST" style="display:none;">
                             @csrf
                         </form>

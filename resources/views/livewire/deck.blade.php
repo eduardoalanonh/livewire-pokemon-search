@@ -12,7 +12,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">{{$pokemon->name}}</h5>
+                                    <h5 class="card-title text-center">{{ucfirst($pokemon->name)}}</h5>
                                     <h5>Weigtht</h5>
                                     <div class="progress">
                                         <div class="progress-bar bg-info" role="progressbar"
@@ -33,8 +33,7 @@
                                     </div>
                                     <h5 class="mt-1"><span
                                             class="badge badge-pill badge-success">{{$pokemon->ability}}</span></h5>
-                                    <p class="card-text"><small class="text-muted">Last
-                                            updated {{$pokemon->created_at->locale('en')->diffForHumans()}}</small></p>
+                                    <p class="card-text"><small class="text-muted">Created at  {{$pokemon->created_at->locale('en')->diffForHumans()}}</small></p>
                                     <div class="text-center">
                                         <button class="btn btn-danger" wire:click="destroy({{$pokemon->id}})">Delete
                                         </button>
