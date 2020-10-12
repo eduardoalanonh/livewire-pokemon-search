@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec9c0c28-00cf-4c4c-97e9-4178c05db154" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +210,7 @@
       <workItem from="1602023923274" duration="8754000" />
       <workItem from="1602035611142" duration="7714000" />
       <workItem from="1602364454523" duration="2535000" />
-      <workItem from="1602367101206" duration="9704000" />
+      <workItem from="1602367101206" duration="10521000" />
     </task>
     <servers />
   </component>
