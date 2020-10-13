@@ -37,12 +37,15 @@ class Input extends Component
         $this->data = $response->json();
 
         //verify pokemon exists
+
         if (auth()->user()) {
-            $pokemon_exist = DB::table('decks')->where([
-                ['name', '=', $this->data['name']],
-                ['user_id', '=', \auth()->user()->getAuthIdentifier()]
-            ])->get();
-            $this->pokemon_exist = $pokemon_exist->isNotEmpty();
+            if ($this->data) {
+                $pokemon_exist = DB::table('decks')->where([
+                    ['name', '=', $this->data['name']],
+                    ['user_id', '=', \auth()->user()->getAuthIdentifier()]
+                ])->get();
+                $this->pokemon_exist = $pokemon_exist->isNotEmpty();
+            }
         }
 
         if ($this->data ?? false) {
