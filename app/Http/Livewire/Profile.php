@@ -20,7 +20,10 @@ class Profile extends Component
     {
         $this->user = auth()->user();
 
-        $this->user_photo = str_replace('public/', '', $this->user->profile_photo_path);
+        $this->user_photo = $this->user->profile_photo_path;
+        if ($this->user_photo) {
+            $this->user_photo = 'https://eduardoalano.s3-sa-east-1.amazonaws.com/' . $this->user->profile_photo_path;
+        }
 
         return view('livewire.profile')
             ->extends('layouts.app')
@@ -33,13 +36,13 @@ class Profile extends Component
             'photo' => 'image|max:1024', // 1MB Max
         ]);
 
-        $path = $this->photo->store('public/photos');
+        $path = $this->photo->store('photos', 's3');
 
         \auth()->user()->update([
             'profile_photo_path' => $path
         ]);
 
-        $this->user_photo = str_replace('public/', '', $path);
+        $this->user_photo = 'https://eduardoalano.s3-sa-east-1.amazonaws.com/' . $path;
     }
 
     public function updateEmail()
@@ -48,6 +51,5 @@ class Profile extends Component
             'email' => $this->new_email
         ]);
         $this->new_email = null;
-
     }
 }

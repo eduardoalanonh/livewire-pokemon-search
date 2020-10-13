@@ -68,10 +68,10 @@
                             <a class="nav-link @if(request()->is('profile')) active @endif"
                                href="{{route('profile')}}"> <span>
                                      @if(!auth()->user()->profile_photo_path)
-                                        <img src="{{asset('storage/no-profile.jpg')}}" alt="..." style="width:40px">
+                                        <img src="https://eduardoalano.s3-sa-east-1.amazonaws.com/no-avatar.png" alt="..." style="width:40px">
                                     @else
                                         <img
-                                            src="{{asset('storage/' . str_replace('public/', '', auth()->user()->profile_photo_path))}}"
+                                            src="{{'https://eduardoalano.s3-sa-east-1.amazonaws.com/' . auth()->user()->profile_photo_path}}"
                                             alt="..." style="width:20px"
                                             class="img-fluid rounded rounded-circle">
                                     @endif

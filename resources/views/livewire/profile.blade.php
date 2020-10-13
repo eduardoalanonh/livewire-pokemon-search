@@ -13,14 +13,14 @@
                          x-on:livewire-upload-error="isUploading = false"
                          x-on:livewire-upload-progress="progress = $event.detail.progress"
                     >
-                        @if($user_photo == '')
+                        @if(!$user_photo)
                             <figure class="figure mt-3">
-                                <img src="{{asset('storage/no-profile.jpg')}}"
-                                     class="figure-img img-fluid rounded rounded-circle" alt="...">
+                                <img src="https://eduardoalano.s3-sa-east-1.amazonaws.com/no-avatar.png"
+                                     class="figure-img img-fluid rounded rounded-circle" alt="no-avatar">
                             </figure>
                         @else
                             <figure class="figure mt-3">
-                                <img src="{{asset('storage/' . $user_photo)}}"
+                                <img src="{{$user_photo}}"
                                      class="figure-img img-fluid rounded rounded-circle" alt="...">
                             </figure>
                         @endif
